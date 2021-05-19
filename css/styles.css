@@ -227,8 +227,12 @@ img {
   margin-left: 93px;
 }
 
-.page-header-content .list-item:not(:first-child) {
+.site-nav-list .list-item:not(:first-child) {
   margin-left: 50px;
+}
+
+.auth-nav-list .list-item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .auth-nav-list {
