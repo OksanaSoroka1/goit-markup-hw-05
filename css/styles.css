@@ -203,6 +203,7 @@ img {
 
 /*Скриває backdrop з контентом*/
 .is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -270,7 +271,7 @@ img {
 
 .header-link.current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   content: '';
   width: 100%;
@@ -587,7 +588,7 @@ address {
 
   transform: translateY(100%);
 
-  transition-property: transform, opacity;
+  transition-property: transform, opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -619,6 +620,7 @@ address {
 
 .projects-link:hover .projects-list-description,
 .projects-link:focus .projects-list-description {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0%);
 }
@@ -633,10 +635,13 @@ address {
   background-color: var(--modal-backdrop-bcg);
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
 }
 /*Оформлення модального вікна*/
@@ -659,7 +664,7 @@ address {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.95);
 }
 
 .close-button {
