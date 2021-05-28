@@ -444,20 +444,25 @@ address {
   position: relative;
 }
 
-.work .list-item-title {
+.work .title-thumb {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  height: 70px;
 
-  font-size: inherit;
-  line-height: 0.875;
-  text-align: center;
-  color: var(--primary-white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: var(--work-list-item-title-bcg);
+}
+
+.work .list-item-title {
+  font-size: inherit;
+  line-height: 0.875;
+  color: var(--primary-white-color);
+  text-align: center;
 }
 
 /*Створює марджінги від заголовків секцій work-section і team-section */
